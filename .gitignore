@@ -1,0 +1,5 @@
+*.vvp
+__pycache__/
+runs/*/
+runs/LATEST
+!runs/.gitkeep
