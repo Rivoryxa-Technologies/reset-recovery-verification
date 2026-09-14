@@ -1,0 +1,786 @@
+{
+  "schema_version": 1,
+  "run_id": "20260914T195420.100437Z-c33074f6",
+  "started_utc": "20260914T195420.100437Z",
+  "finished_utc": "2026-09-14T19:54:20.416504+00:00",
+  "repository": "/private/tmp/rivoryxa-reset-recovery-release",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "python_version": "3.9.6",
+  "iverilog_version": "Icarus Verilog version 13.0 (stable) (v13_0)",
+  "vvp_version": "Icarus Verilog runtime version 13.0 (stable) (v13_0)",
+  "timeout_seconds": 10.0,
+  "seeds": [
+    1,
+    17,
+    2026
+  ],
+  "configs": [
+    {
+      "name": "short_narrow",
+      "data_width": 8,
+      "stages": 2,
+      "bias": 3
+    },
+    {
+      "name": "default",
+      "data_width": 8,
+      "stages": 3,
+      "bias": 7
+    },
+    {
+      "name": "deep_wide",
+      "data_width": 16,
+      "stages": 5,
+      "bias": 257
+    }
+  ],
+  "source_sha256": {
+    "rtl/response_pipeline.sv": "d46e55dccb2546a76824af15e24620fbe58d5f0d9f82ae3058912537abe46da4",
+    "tb/tb_reset_recovery.sv": "45b0bf0d4c2497ca731502fb24f6ad39cfa95bc1b61d0ff960c9bfa20dc5e661",
+    "tools/run.py": "08247cabf80456d8076adbf8f7f88d75c4f8d359a689cfb8cecbd86a40cd6d9d"
+  },
+  "pass_marker": "TEST_PASS: reset recovery verified",
+  "mutant_failure_marker": "RESET_FLUSH_CHECK_FAILED:",
+  "test_failure_marker": "TEST_FAIL:",
+  "overall_pass": true,
+  "results": [
+    {
+      "config": {
+        "name": "short_narrow",
+        "data_width": 8,
+        "stages": 2,
+        "bias": 3
+      },
+      "variant": "correct",
+      "seed": 1,
+      "compile_command": [
+        "iverilog",
+        "-g2012",
+        "-s",
+        "tb_reset_recovery",
+        "-D",
+        "DATA_WIDTH=8",
+        "-D",
+        "STAGES=2",
+        "-D",
+        "BIAS=3",
+        "-D",
+        "MUTANT=0",
+        "-o",
+        "/private/tmp/rivoryxa-reset-recovery-release/runs/20260914T195420.100437Z-c33074f6/short_narrow-correct.vvp",
+        "/private/tmp/rivoryxa-reset-recovery-release/rtl/response_pipeline.sv",
+        "/private/tmp/rivoryxa-reset-recovery-release/tb/tb_reset_recovery.sv"
+      ],
+      "compile_returncode": 0,
+      "compile_seconds": 0.021427,
+      "simulation_returncode": 0,
+      "simulation_command": [
+        "vvp",
+        "/private/tmp/rivoryxa-reset-recovery-release/runs/20260914T195420.100437Z-c33074f6/short_narrow-correct.vvp",
+        "+SEED=1"
+      ],
+      "simulation_seconds": 0.012747,
+      "timed_out": false,
+      "expected_marker": "TEST_PASS: reset recovery verified",
+      "expected_outcome_observed": true,
+      "log": "short_narrow-correct-seed1.log"
+    },
+    {
+      "config": {
+        "name": "short_narrow",
+        "data_width": 8,
+        "stages": 2,
+        "bias": 3
+      },
+      "variant": "correct",
+      "seed": 17,
+      "compile_command": [
+        "iverilog",
+        "-g2012",
+        "-s",
+        "tb_reset_recovery",
+        "-D",
+        "DATA_WIDTH=8",
+        "-D",
+        "STAGES=2",
+        "-D",
+        "BIAS=3",
+        "-D",
+        "MUTANT=0",
+        "-o",
+        "/private/tmp/rivoryxa-reset-recovery-release/runs/20260914T195420.100437Z-c33074f6/short_narrow-correct.vvp",
+        "/private/tmp/rivoryxa-reset-recovery-release/rtl/response_pipeline.sv",
+        "/private/tmp/rivoryxa-reset-recovery-release/tb/tb_reset_recovery.sv"
+      ],
+      "compile_returncode": 0,
+      "compile_seconds": 0.021427,
+      "simulation_returncode": 0,
+      "simulation_command": [
+        "vvp",
+        "/private/tmp/rivoryxa-reset-recovery-release/runs/20260914T195420.100437Z-c33074f6/short_narrow-correct.vvp",
+        "+SEED=17"
+      ],
+      "simulation_seconds": 0.011018,
+      "timed_out": false,
+      "expected_marker": "TEST_PASS: reset recovery verified",
+      "expected_outcome_observed": true,
+      "log": "short_narrow-correct-seed17.log"
+    },
+    {
+      "config": {
+        "name": "short_narrow",
+        "data_width": 8,
+        "stages": 2,
+        "bias": 3
+      },
+      "variant": "correct",
+      "seed": 2026,
+      "compile_command": [
+        "iverilog",
+        "-g2012",
+        "-s",
+        "tb_reset_recovery",
+        "-D",
+        "DATA_WIDTH=8",
+        "-D",
+        "STAGES=2",
+        "-D",
+        "BIAS=3",
+        "-D",
+        "MUTANT=0",
+        "-o",
+        "/private/tmp/rivoryxa-reset-recovery-release/runs/20260914T195420.100437Z-c33074f6/short_narrow-correct.vvp",
+        "/private/tmp/rivoryxa-reset-recovery-release/rtl/response_pipeline.sv",
+        "/private/tmp/rivoryxa-reset-recovery-release/tb/tb_reset_recovery.sv"
+      ],
+      "compile_returncode": 0,
+      "compile_seconds": 0.021427,
+      "simulation_returncode": 0,
+      "simulation_command": [
+        "vvp",
+        "/private/tmp/rivoryxa-reset-recovery-release/runs/20260914T195420.100437Z-c33074f6/short_narrow-correct.vvp",
+        "+SEED=2026"
+      ],
+      "simulation_seconds": 0.011212,
+      "timed_out": false,
+      "expected_marker": "TEST_PASS: reset recovery verified",
+      "expected_outcome_observed": true,
+      "log": "short_narrow-correct-seed2026.log"
+    },
+    {
+      "config": {
+        "name": "short_narrow",
+        "data_width": 8,
+        "stages": 2,
+        "bias": 3
+      },
+      "variant": "mutant",
+      "seed": 1,
+      "compile_command": [
+        "iverilog",
+        "-g2012",
+        "-s",
+        "tb_reset_recovery",
+        "-D",
+        "DATA_WIDTH=8",
+        "-D",
+        "STAGES=2",
+        "-D",
+        "BIAS=3",
+        "-D",
+        "MUTANT=1",
+        "-o",
+        "/private/tmp/rivoryxa-reset-recovery-release/runs/20260914T195420.100437Z-c33074f6/short_narrow-mutant.vvp",
+        "/private/tmp/rivoryxa-reset-recovery-release/rtl/response_pipeline.sv",
+        "/private/tmp/rivoryxa-reset-recovery-release/tb/tb_reset_recovery.sv"
+      ],
+      "compile_returncode": 0,
+      "compile_seconds": 0.01988,
+      "simulation_returncode": 1,
+      "simulation_command": [
+        "vvp",
+        "/private/tmp/rivoryxa-reset-recovery-release/runs/20260914T195420.100437Z-c33074f6/short_narrow-mutant.vvp",
+        "+SEED=1"
+      ],
+      "simulation_seconds": 0.010233,
+      "timed_out": false,
+      "expected_marker": "RESET_FLUSH_CHECK_FAILED:",
+      "expected_outcome_observed": true,
+      "log": "short_narrow-mutant-seed1.log"
+    },
+    {
+      "config": {
+        "name": "short_narrow",
+        "data_width": 8,
+        "stages": 2,
+        "bias": 3
+      },
+      "variant": "mutant",
+      "seed": 17,
+      "compile_command": [
+        "iverilog",
+        "-g2012",
+        "-s",
+        "tb_reset_recovery",
+        "-D",
+        "DATA_WIDTH=8",
+        "-D",
+        "STAGES=2",
+        "-D",
+        "BIAS=3",
+        "-D",
+        "MUTANT=1",
+        "-o",
+        "/private/tmp/rivoryxa-reset-recovery-release/runs/20260914T195420.100437Z-c33074f6/short_narrow-mutant.vvp",
+        "/private/tmp/rivoryxa-reset-recovery-release/rtl/response_pipeline.sv",
+        "/private/tmp/rivoryxa-reset-recovery-release/tb/tb_reset_recovery.sv"
+      ],
+      "compile_returncode": 0,
+      "compile_seconds": 0.01988,
+      "simulation_returncode": 1,
+      "simulation_command": [
+        "vvp",
+        "/private/tmp/rivoryxa-reset-recovery-release/runs/20260914T195420.100437Z-c33074f6/short_narrow-mutant.vvp",
+        "+SEED=17"
+      ],
+      "simulation_seconds": 0.010206,
+      "timed_out": false,
+      "expected_marker": "RESET_FLUSH_CHECK_FAILED:",
+      "expected_outcome_observed": true,
+      "log": "short_narrow-mutant-seed17.log"
+    },
+    {
+      "config": {
+        "name": "short_narrow",
+        "data_width": 8,
+        "stages": 2,
+        "bias": 3
+      },
+      "variant": "mutant",
+      "seed": 2026,
+      "compile_command": [
+        "iverilog",
+        "-g2012",
+        "-s",
+        "tb_reset_recovery",
+        "-D",
+        "DATA_WIDTH=8",
+        "-D",
+        "STAGES=2",
+        "-D",
+        "BIAS=3",
+        "-D",
+        "MUTANT=1",
+        "-o",
+        "/private/tmp/rivoryxa-reset-recovery-release/runs/20260914T195420.100437Z-c33074f6/short_narrow-mutant.vvp",
+        "/private/tmp/rivoryxa-reset-recovery-release/rtl/response_pipeline.sv",
+        "/private/tmp/rivoryxa-reset-recovery-release/tb/tb_reset_recovery.sv"
+      ],
+      "compile_returncode": 0,
+      "compile_seconds": 0.01988,
+      "simulation_returncode": 1,
+      "simulation_command": [
+        "vvp",
+        "/private/tmp/rivoryxa-reset-recovery-release/runs/20260914T195420.100437Z-c33074f6/short_narrow-mutant.vvp",
+        "+SEED=2026"
+      ],
+      "simulation_seconds": 0.010847,
+      "timed_out": false,
+      "expected_marker": "RESET_FLUSH_CHECK_FAILED:",
+      "expected_outcome_observed": true,
+      "log": "short_narrow-mutant-seed2026.log"
+    },
+    {
+      "config": {
+        "name": "default",
+        "data_width": 8,
+        "stages": 3,
+        "bias": 7
+      },
+      "variant": "correct",
+      "seed": 1,
+      "compile_command": [
+        "iverilog",
+        "-g2012",
+        "-s",
+        "tb_reset_recovery",
+        "-D",
+        "DATA_WIDTH=8",
+        "-D",
+        "STAGES=3",
+        "-D",
+        "BIAS=7",
+        "-D",
+        "MUTANT=0",
+        "-o",
+        "/private/tmp/rivoryxa-reset-recovery-release/runs/20260914T195420.100437Z-c33074f6/default-correct.vvp",
+        "/private/tmp/rivoryxa-reset-recovery-release/rtl/response_pipeline.sv",
+        "/private/tmp/rivoryxa-reset-recovery-release/tb/tb_reset_recovery.sv"
+      ],
+      "compile_returncode": 0,
+      "compile_seconds": 0.019799,
+      "simulation_returncode": 0,
+      "simulation_command": [
+        "vvp",
+        "/private/tmp/rivoryxa-reset-recovery-release/runs/20260914T195420.100437Z-c33074f6/default-correct.vvp",
+        "+SEED=1"
+      ],
+      "simulation_seconds": 0.010854,
+      "timed_out": false,
+      "expected_marker": "TEST_PASS: reset recovery verified",
+      "expected_outcome_observed": true,
+      "log": "default-correct-seed1.log"
+    },
+    {
+      "config": {
+        "name": "default",
+        "data_width": 8,
+        "stages": 3,
+        "bias": 7
+      },
+      "variant": "correct",
+      "seed": 17,
+      "compile_command": [
+        "iverilog",
+        "-g2012",
+        "-s",
+        "tb_reset_recovery",
+        "-D",
+        "DATA_WIDTH=8",
+        "-D",
+        "STAGES=3",
+        "-D",
+        "BIAS=7",
+        "-D",
+        "MUTANT=0",
+        "-o",
+        "/private/tmp/rivoryxa-reset-recovery-release/runs/20260914T195420.100437Z-c33074f6/default-correct.vvp",
+        "/private/tmp/rivoryxa-reset-recovery-release/rtl/response_pipeline.sv",
+        "/private/tmp/rivoryxa-reset-recovery-release/tb/tb_reset_recovery.sv"
+      ],
+      "compile_returncode": 0,
+      "compile_seconds": 0.019799,
+      "simulation_returncode": 0,
+      "simulation_command": [
+        "vvp",
+        "/private/tmp/rivoryxa-reset-recovery-release/runs/20260914T195420.100437Z-c33074f6/default-correct.vvp",
+        "+SEED=17"
+      ],
+      "simulation_seconds": 0.011097,
+      "timed_out": false,
+      "expected_marker": "TEST_PASS: reset recovery verified",
+      "expected_outcome_observed": true,
+      "log": "default-correct-seed17.log"
+    },
+    {
+      "config": {
+        "name": "default",
+        "data_width": 8,
+        "stages": 3,
+        "bias": 7
+      },
+      "variant": "correct",
+      "seed": 2026,
+      "compile_command": [
+        "iverilog",
+        "-g2012",
+        "-s",
+        "tb_reset_recovery",
+        "-D",
+        "DATA_WIDTH=8",
+        "-D",
+        "STAGES=3",
+        "-D",
+        "BIAS=7",
+        "-D",
+        "MUTANT=0",
+        "-o",
+        "/private/tmp/rivoryxa-reset-recovery-release/runs/20260914T195420.100437Z-c33074f6/default-correct.vvp",
+        "/private/tmp/rivoryxa-reset-recovery-release/rtl/response_pipeline.sv",
+        "/private/tmp/rivoryxa-reset-recovery-release/tb/tb_reset_recovery.sv"
+      ],
+      "compile_returncode": 0,
+      "compile_seconds": 0.019799,
+      "simulation_returncode": 0,
+      "simulation_command": [
+        "vvp",
+        "/private/tmp/rivoryxa-reset-recovery-release/runs/20260914T195420.100437Z-c33074f6/default-correct.vvp",
+        "+SEED=2026"
+      ],
+      "simulation_seconds": 0.010084,
+      "timed_out": false,
+      "expected_marker": "TEST_PASS: reset recovery verified",
+      "expected_outcome_observed": true,
+      "log": "default-correct-seed2026.log"
+    },
+    {
+      "config": {
+        "name": "default",
+        "data_width": 8,
+        "stages": 3,
+        "bias": 7
+      },
+      "variant": "mutant",
+      "seed": 1,
+      "compile_command": [
+        "iverilog",
+        "-g2012",
+        "-s",
+        "tb_reset_recovery",
+        "-D",
+        "DATA_WIDTH=8",
+        "-D",
+        "STAGES=3",
+        "-D",
+        "BIAS=7",
+        "-D",
+        "MUTANT=1",
+        "-o",
+        "/private/tmp/rivoryxa-reset-recovery-release/runs/20260914T195420.100437Z-c33074f6/default-mutant.vvp",
+        "/private/tmp/rivoryxa-reset-recovery-release/rtl/response_pipeline.sv",
+        "/private/tmp/rivoryxa-reset-recovery-release/tb/tb_reset_recovery.sv"
+      ],
+      "compile_returncode": 0,
+      "compile_seconds": 0.018271,
+      "simulation_returncode": 1,
+      "simulation_command": [
+        "vvp",
+        "/private/tmp/rivoryxa-reset-recovery-release/runs/20260914T195420.100437Z-c33074f6/default-mutant.vvp",
+        "+SEED=1"
+      ],
+      "simulation_seconds": 0.010851,
+      "timed_out": false,
+      "expected_marker": "RESET_FLUSH_CHECK_FAILED:",
+      "expected_outcome_observed": true,
+      "log": "default-mutant-seed1.log"
+    },
+    {
+      "config": {
+        "name": "default",
+        "data_width": 8,
+        "stages": 3,
+        "bias": 7
+      },
+      "variant": "mutant",
+      "seed": 17,
+      "compile_command": [
+        "iverilog",
+        "-g2012",
+        "-s",
+        "tb_reset_recovery",
+        "-D",
+        "DATA_WIDTH=8",
+        "-D",
+        "STAGES=3",
+        "-D",
+        "BIAS=7",
+        "-D",
+        "MUTANT=1",
+        "-o",
+        "/private/tmp/rivoryxa-reset-recovery-release/runs/20260914T195420.100437Z-c33074f6/default-mutant.vvp",
+        "/private/tmp/rivoryxa-reset-recovery-release/rtl/response_pipeline.sv",
+        "/private/tmp/rivoryxa-reset-recovery-release/tb/tb_reset_recovery.sv"
+      ],
+      "compile_returncode": 0,
+      "compile_seconds": 0.018271,
+      "simulation_returncode": 1,
+      "simulation_command": [
+        "vvp",
+        "/private/tmp/rivoryxa-reset-recovery-release/runs/20260914T195420.100437Z-c33074f6/default-mutant.vvp",
+        "+SEED=17"
+      ],
+      "simulation_seconds": 0.011182,
+      "timed_out": false,
+      "expected_marker": "RESET_FLUSH_CHECK_FAILED:",
+      "expected_outcome_observed": true,
+      "log": "default-mutant-seed17.log"
+    },
+    {
+      "config": {
+        "name": "default",
+        "data_width": 8,
+        "stages": 3,
+        "bias": 7
+      },
+      "variant": "mutant",
+      "seed": 2026,
+      "compile_command": [
+        "iverilog",
+        "-g2012",
+        "-s",
+        "tb_reset_recovery",
+        "-D",
+        "DATA_WIDTH=8",
+        "-D",
+        "STAGES=3",
+        "-D",
+        "BIAS=7",
+        "-D",
+        "MUTANT=1",
+        "-o",
+        "/private/tmp/rivoryxa-reset-recovery-release/runs/20260914T195420.100437Z-c33074f6/default-mutant.vvp",
+        "/private/tmp/rivoryxa-reset-recovery-release/rtl/response_pipeline.sv",
+        "/private/tmp/rivoryxa-reset-recovery-release/tb/tb_reset_recovery.sv"
+      ],
+      "compile_returncode": 0,
+      "compile_seconds": 0.018271,
+      "simulation_returncode": 1,
+      "simulation_command": [
+        "vvp",
+        "/private/tmp/rivoryxa-reset-recovery-release/runs/20260914T195420.100437Z-c33074f6/default-mutant.vvp",
+        "+SEED=2026"
+      ],
+      "simulation_seconds": 0.010342,
+      "timed_out": false,
+      "expected_marker": "RESET_FLUSH_CHECK_FAILED:",
+      "expected_outcome_observed": true,
+      "log": "default-mutant-seed2026.log"
+    },
+    {
+      "config": {
+        "name": "deep_wide",
+        "data_width": 16,
+        "stages": 5,
+        "bias": 257
+      },
+      "variant": "correct",
+      "seed": 1,
+      "compile_command": [
+        "iverilog",
+        "-g2012",
+        "-s",
+        "tb_reset_recovery",
+        "-D",
+        "DATA_WIDTH=16",
+        "-D",
+        "STAGES=5",
+        "-D",
+        "BIAS=257",
+        "-D",
+        "MUTANT=0",
+        "-o",
+        "/private/tmp/rivoryxa-reset-recovery-release/runs/20260914T195420.100437Z-c33074f6/deep_wide-correct.vvp",
+        "/private/tmp/rivoryxa-reset-recovery-release/rtl/response_pipeline.sv",
+        "/private/tmp/rivoryxa-reset-recovery-release/tb/tb_reset_recovery.sv"
+      ],
+      "compile_returncode": 0,
+      "compile_seconds": 0.019782,
+      "simulation_returncode": 0,
+      "simulation_command": [
+        "vvp",
+        "/private/tmp/rivoryxa-reset-recovery-release/runs/20260914T195420.100437Z-c33074f6/deep_wide-correct.vvp",
+        "+SEED=1"
+      ],
+      "simulation_seconds": 0.011057,
+      "timed_out": false,
+      "expected_marker": "TEST_PASS: reset recovery verified",
+      "expected_outcome_observed": true,
+      "log": "deep_wide-correct-seed1.log"
+    },
+    {
+      "config": {
+        "name": "deep_wide",
+        "data_width": 16,
+        "stages": 5,
+        "bias": 257
+      },
+      "variant": "correct",
+      "seed": 17,
+      "compile_command": [
+        "iverilog",
+        "-g2012",
+        "-s",
+        "tb_reset_recovery",
+        "-D",
+        "DATA_WIDTH=16",
+        "-D",
+        "STAGES=5",
+        "-D",
+        "BIAS=257",
+        "-D",
+        "MUTANT=0",
+        "-o",
+        "/private/tmp/rivoryxa-reset-recovery-release/runs/20260914T195420.100437Z-c33074f6/deep_wide-correct.vvp",
+        "/private/tmp/rivoryxa-reset-recovery-release/rtl/response_pipeline.sv",
+        "/private/tmp/rivoryxa-reset-recovery-release/tb/tb_reset_recovery.sv"
+      ],
+      "compile_returncode": 0,
+      "compile_seconds": 0.019782,
+      "simulation_returncode": 0,
+      "simulation_command": [
+        "vvp",
+        "/private/tmp/rivoryxa-reset-recovery-release/runs/20260914T195420.100437Z-c33074f6/deep_wide-correct.vvp",
+        "+SEED=17"
+      ],
+      "simulation_seconds": 0.010244,
+      "timed_out": false,
+      "expected_marker": "TEST_PASS: reset recovery verified",
+      "expected_outcome_observed": true,
+      "log": "deep_wide-correct-seed17.log"
+    },
+    {
+      "config": {
+        "name": "deep_wide",
+        "data_width": 16,
+        "stages": 5,
+        "bias": 257
+      },
+      "variant": "correct",
+      "seed": 2026,
+      "compile_command": [
+        "iverilog",
+        "-g2012",
+        "-s",
+        "tb_reset_recovery",
+        "-D",
+        "DATA_WIDTH=16",
+        "-D",
+        "STAGES=5",
+        "-D",
+        "BIAS=257",
+        "-D",
+        "MUTANT=0",
+        "-o",
+        "/private/tmp/rivoryxa-reset-recovery-release/runs/20260914T195420.100437Z-c33074f6/deep_wide-correct.vvp",
+        "/private/tmp/rivoryxa-reset-recovery-release/rtl/response_pipeline.sv",
+        "/private/tmp/rivoryxa-reset-recovery-release/tb/tb_reset_recovery.sv"
+      ],
+      "compile_returncode": 0,
+      "compile_seconds": 0.019782,
+      "simulation_returncode": 0,
+      "simulation_command": [
+        "vvp",
+        "/private/tmp/rivoryxa-reset-recovery-release/runs/20260914T195420.100437Z-c33074f6/deep_wide-correct.vvp",
+        "+SEED=2026"
+      ],
+      "simulation_seconds": 0.010115,
+      "timed_out": false,
+      "expected_marker": "TEST_PASS: reset recovery verified",
+      "expected_outcome_observed": true,
+      "log": "deep_wide-correct-seed2026.log"
+    },
+    {
+      "config": {
+        "name": "deep_wide",
+        "data_width": 16,
+        "stages": 5,
+        "bias": 257
+      },
+      "variant": "mutant",
+      "seed": 1,
+      "compile_command": [
+        "iverilog",
+        "-g2012",
+        "-s",
+        "tb_reset_recovery",
+        "-D",
+        "DATA_WIDTH=16",
+        "-D",
+        "STAGES=5",
+        "-D",
+        "BIAS=257",
+        "-D",
+        "MUTANT=1",
+        "-o",
+        "/private/tmp/rivoryxa-reset-recovery-release/runs/20260914T195420.100437Z-c33074f6/deep_wide-mutant.vvp",
+        "/private/tmp/rivoryxa-reset-recovery-release/rtl/response_pipeline.sv",
+        "/private/tmp/rivoryxa-reset-recovery-release/tb/tb_reset_recovery.sv"
+      ],
+      "compile_returncode": 0,
+      "compile_seconds": 0.019564,
+      "simulation_returncode": 1,
+      "simulation_command": [
+        "vvp",
+        "/private/tmp/rivoryxa-reset-recovery-release/runs/20260914T195420.100437Z-c33074f6/deep_wide-mutant.vvp",
+        "+SEED=1"
+      ],
+      "simulation_seconds": 0.010868,
+      "timed_out": false,
+      "expected_marker": "RESET_FLUSH_CHECK_FAILED:",
+      "expected_outcome_observed": true,
+      "log": "deep_wide-mutant-seed1.log"
+    },
+    {
+      "config": {
+        "name": "deep_wide",
+        "data_width": 16,
+        "stages": 5,
+        "bias": 257
+      },
+      "variant": "mutant",
+      "seed": 17,
+      "compile_command": [
+        "iverilog",
+        "-g2012",
+        "-s",
+        "tb_reset_recovery",
+        "-D",
+        "DATA_WIDTH=16",
+        "-D",
+        "STAGES=5",
+        "-D",
+        "BIAS=257",
+        "-D",
+        "MUTANT=1",
+        "-o",
+        "/private/tmp/rivoryxa-reset-recovery-release/runs/20260914T195420.100437Z-c33074f6/deep_wide-mutant.vvp",
+        "/private/tmp/rivoryxa-reset-recovery-release/rtl/response_pipeline.sv",
+        "/private/tmp/rivoryxa-reset-recovery-release/tb/tb_reset_recovery.sv"
+      ],
+      "compile_returncode": 0,
+      "compile_seconds": 0.019564,
+      "simulation_returncode": 1,
+      "simulation_command": [
+        "vvp",
+        "/private/tmp/rivoryxa-reset-recovery-release/runs/20260914T195420.100437Z-c33074f6/deep_wide-mutant.vvp",
+        "+SEED=17"
+      ],
+      "simulation_seconds": 0.010771,
+      "timed_out": false,
+      "expected_marker": "RESET_FLUSH_CHECK_FAILED:",
+      "expected_outcome_observed": true,
+      "log": "deep_wide-mutant-seed17.log"
+    },
+    {
+      "config": {
+        "name": "deep_wide",
+        "data_width": 16,
+        "stages": 5,
+        "bias": 257
+      },
+      "variant": "mutant",
+      "seed": 2026,
+      "compile_command": [
+        "iverilog",
+        "-g2012",
+        "-s",
+        "tb_reset_recovery",
+        "-D",
+        "DATA_WIDTH=16",
+        "-D",
+        "STAGES=5",
+        "-D",
+        "BIAS=257",
+        "-D",
+        "MUTANT=1",
+        "-o",
+        "/private/tmp/rivoryxa-reset-recovery-release/runs/20260914T195420.100437Z-c33074f6/deep_wide-mutant.vvp",
+        "/private/tmp/rivoryxa-reset-recovery-release/rtl/response_pipeline.sv",
+        "/private/tmp/rivoryxa-reset-recovery-release/tb/tb_reset_recovery.sv"
+      ],
+      "compile_returncode": 0,
+      "compile_seconds": 0.019564,
+      "simulation_returncode": 1,
+      "simulation_command": [
+        "vvp",
+        "/private/tmp/rivoryxa-reset-recovery-release/runs/20260914T195420.100437Z-c33074f6/deep_wide-mutant.vvp",
+        "+SEED=2026"
+      ],
+      "simulation_seconds": 0.011444,
+      "timed_out": false,
+      "expected_marker": "RESET_FLUSH_CHECK_FAILED:",
+      "expected_outcome_observed": true,
+      "log": "deep_wide-mutant-seed2026.log"
+    }
+  ]
+}

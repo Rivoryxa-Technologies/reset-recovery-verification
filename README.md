@@ -66,3 +66,7 @@ This is simulation evidence for one synchronous, single-clock, always-ready pipe
 - `.github/workflows/verify.yml` — CI run and artifact upload
 
 Contributions are welcome under [CONTRIBUTING.md](CONTRIBUTING.md). The project is licensed under the MIT License.
+
+## Recorded result
+
+[Review log and measured results](recorded/2026-09-15/README.md): 9 correct configurations pass and 9 seeded failures are detected. Raw logs, source hashes, timings, and the default RTL synthesis check are included. These are finite educational examples, not client results.

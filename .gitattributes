@@ -1,0 +1,2 @@
+# Preserve raw tool logs, including their original whitespace.
+recorded/**/*.log -whitespace
